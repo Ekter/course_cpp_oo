@@ -8,7 +8,7 @@
 int add_even_between(int a, int b){
     int a1 = a/2;
     int b1 = b/2;
-    auto sum = (b1*(b1+1) - a1*(a1+1))*2;
+    auto sum = (b1*(b1+1) - a1*(a1+1));
     return sum;
 }
 

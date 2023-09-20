@@ -1,4 +1,3 @@
-
 {
   "version": "0.2.0",
   "configurations": [
@@ -20,6 +19,27 @@
           "ignoreFailures": true
         }
       ]
+    },
+    {
+      "name": "build custom and debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "custom build",
+      "miDebuggerPath": "/usr/bin/gdb"
     }
   ]
 }
