@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "configurePresets": [
+    {
+      "name": "ninja-nmc",
+      "displayName": "Multi-Config MinGW",
+      "generator": "Ninja Multi-Config",
+      "binaryDir": "${sourceDir}/.build",
+      "cacheVariables": {
+        "CMAKE_CONFIGURATION_TYPES": "Release;Debug"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "release",
+      "displayName": "Ninja Release",
+      "configurePreset": "ninja-nmc",
+      "configuration": "Release"
+    },
+    {
+      "name": "debug",
+      "displayName": "Ninja Debug",
+      "configurePreset": "ninja-nmc",
+      "configuration": "Debug"
+    }
+  ]
+}
